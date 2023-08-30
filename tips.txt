@@ -1,0 +1,31 @@
+cmake make makefiles
+
+use cmake
+tell where source is, where build folder is
+
+
+Create CMakeLists.txt in the root of the source
+    cmake_minimum_required(VERSION 3.22.1)
+    project(test2)
+    add_executable(${PROJECT_NAME} main.cpp)
+
+Base Use:
+    Syntax
+        cmake [options] -S <path-to-source> -B <path-to-build>
+    Do
+        mkdir -p out/build/
+
+        in the root of project
+            cmake -S ./ -B ./out/build/
+
+        Result:
+            It will generate
+                Makefile
+                CMakeFiles/
+
+    Build
+        cd out/build/
+        make
+
+install(TARGETS trim DESTINATION bin)
+    it will install trim into usr/local/bin/        

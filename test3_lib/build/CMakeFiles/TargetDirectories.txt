@@ -1,0 +1,7 @@
+/home/hu/ws/cmake_tutorial/test3_lib/build/CMakeFiles/trim.dir
+/home/hu/ws/cmake_tutorial/test3_lib/build/CMakeFiles/edit_cache.dir
+/home/hu/ws/cmake_tutorial/test3_lib/build/CMakeFiles/rebuild_cache.dir
+/home/hu/ws/cmake_tutorial/test3_lib/build/CMakeFiles/list_install_components.dir
+/home/hu/ws/cmake_tutorial/test3_lib/build/CMakeFiles/install.dir
+/home/hu/ws/cmake_tutorial/test3_lib/build/CMakeFiles/install/local.dir
+/home/hu/ws/cmake_tutorial/test3_lib/build/CMakeFiles/install/strip.dir
