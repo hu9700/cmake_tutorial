@@ -29,3 +29,15 @@ Base Use:
 
 install(TARGETS trim DESTINATION bin)
     it will install trim into usr/local/bin/        
+
+print all the make options
+make help
+
+install the executable
+sudo make install
+
+Add lib
+add_library(mymath adder.cpp)
+
+Use PRIVATE to not expose the library to other program
+target_link_directories(testsome PRIVATE ${CMAKE_SOURCE_DIR}/../lib/build/)
