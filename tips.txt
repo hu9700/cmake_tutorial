@@ -38,6 +38,13 @@ sudo make install
 
 Add lib
 add_library(mymath adder.cpp)
+set_target_properties(mymath PROPERTIES PUBLIC_HEADER adder.h)
+install(TARGETS mymath LIBRARY DESTINATION lib
+        PUBLIC_HEADER DESTINATION include)
 
-Use PRIVATE to not expose the library to other program
-target_link_directories(testsome PRIVATE ${CMAKE_SOURCE_DIR}/../lib/build/)
+    Installing: /usr/local/lib/libmymath.a
+    Installing: /usr/local/include/adder.h        
+
+#No need for link directory if the lib is installed
+#Use PRIVATE to not expose the library to other program
+#target_link_directories(testsome PRIVATE ${CMAKE_SOURCE_DIR}/../lib/build/)
