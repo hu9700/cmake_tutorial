@@ -48,3 +48,25 @@ install(TARGETS mymath LIBRARY DESTINATION lib
 #No need for link directory if the lib is installed
 #Use PRIVATE to not expose the library to other program
 #target_link_directories(testsome PRIVATE ${CMAKE_SOURCE_DIR}/../lib/build/)
+
+
+Link Lib build local
+    the link directory will look through the build folder
+        target_link_directories(${PROJECT_NAME} PRIVATE glfw/src)
+    add the lib
+
+Link Lib is already in system
+    target_link_libraries(testsome mymath)
+
+add sub module
+git submodule add https://github.com/glfw/glfw.git
+
+checkout sub module when just have main repo cloned
+    git submodule update --init --recursive
+
+We can change CMakeLists.txt option
+change them in run time or config time for more option
+In CMakeLists.txt
+    option(GLFW_BUILD_DOCS "Build the GLFW documentation" ON)
+Do cmake to change option
+    cmake -DGLFW_BUILD_DOCS=OFF -S ./ -B ./build/
