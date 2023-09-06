@@ -70,3 +70,8 @@ In CMakeLists.txt
     option(GLFW_BUILD_DOCS "Build the GLFW documentation" ON)
 Do cmake to change option
     cmake -DGLFW_BUILD_DOCS=OFF -S ./ -B ./build/
+
+Config failed
+input test6_Config.h.in 
+output test6_Config.h
+configure_file(test6_Config.h.in test6_Config.h)    
