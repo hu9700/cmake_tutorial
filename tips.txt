@@ -75,3 +75,27 @@ Config failed
 input test6_Config.h.in 
 output test6_Config.h
 configure_file(test6_Config.h.in test6_Config.h)    
+
+
+
+WINDOWS:
+using Powershell
+
+check the genrator option   cmake.org/cmake/help/latest/manual/cmake-generators.7.html
+
+using MinGW
+    cmake -S ./ -B ./build -G "MinGW Makefiles"
+    cmake -S ./ -B ./build -G "MSYS Makefiles"
+    cmake -S ./ -B ./build -G "Visual Stuido 15 2017"
+
+using VSCode + MSBuild
+    location of MSBuild c:/Program File(x86)/Microsoft Visual Studio/2017/MSBuild/Current/Bin/MSBuild.exe
+    CMakeLists.txt
+        cmake_minimum_required(VERSION 3.19)
+        project(test)
+        add_executable(test main.cpp)
+
+    After generate the MSBuild
+    MSBuild.exe ./test.sln
+
+vcpkg integrate install        
